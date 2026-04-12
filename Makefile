@@ -7,7 +7,7 @@ init:
 	pip install pyinstaller
 
 $(NAME_CRP):
-	pyinstaller --onefile --name $(NAME_CRP) crypto.py
+	python3 -m PyInstaller --onefile --name $(NAME_CRP) crypto.py
 
 $(NAME_DCRP):
-	pyinstaller --onefile --name $(NAME_DCRP) decrypto.py
+	python3 -m PyInstaller --onefile --name $(NAME_DCRP) decrypto.py
