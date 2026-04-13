@@ -4,7 +4,7 @@ window = Tk()
 window.title("Crypto")
 window.geometry("720x480")
 window.minsize(720, 480)
-window.iconbitmap("cesar.ico")
+# window.iconbitmap("cesar.ico")
 window.config(background='#41b77f')
 
 frame = Frame(window,bg = '#41b77f')
