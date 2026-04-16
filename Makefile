@@ -1,7 +1,7 @@
 NAME_CRP = crypto
 NAME_DCRP = decrypto
 
-all: init $(NAME_CRP) $(NAME_DCRP)
+all: $(NAME_CRP) $(NAME_DCRP)
 
 init:
 	pip install pyinstaller
