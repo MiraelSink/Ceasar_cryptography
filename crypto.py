@@ -23,17 +23,18 @@ canvas.pack(side = LEFT)
 
 #partie droite
 
+
+def shift_char(char, key):
+    code = ord(char)
+    if 32 <= code <= 126:
+        return chr((code - 32 + key) % 95 + 32)
+    return char
+
 def crypt():
     text_result.delete(0, END)
     text = text_entry.get()
     clef = int(key_entry.get())
-    message = []
-    message_decode = []
-    for i in text:
-        message.append(ord(i) + clef)
-    for i in message:
-        message_decode.append(chr(i))
-    final = "".join(message_decode)
+    final = "".join(shift_char(char, clef) for char in text)
     text_result.insert(0,final)
     text_result.pack()
 
